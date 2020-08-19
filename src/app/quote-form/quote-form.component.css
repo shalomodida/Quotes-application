@@ -1,0 +1,11 @@
+textarea, input{
+    background: transparent;
+}
+label{
+    color: turquoise;
+    padding: 10px;
+}
+.card{
+    background: rgb(110, 61, 14);;
+    border-radius: 10%;
+}

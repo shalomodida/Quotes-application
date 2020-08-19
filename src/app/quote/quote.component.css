@@ -1,0 +1,36 @@
+.header{
+    text-align: center;
+    text-shadow: rgb(0, 255, 34);
+    font-weight: bold;
+    font-style: oblique;
+    border: dodgerblue;
+}
+.card{
+    background: transparent;
+    border: none;
+}
+.footer{
+    margin-top: 40px;
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+    color: rgb(255, 166, 0);
+    background-color: dimgray;
+    background-size: contain;
+}
+.container{
+    border-color: forestgreen;
+    border-radius: 30%;
+}
+.card-header{
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.desc{
+    font-weight: 900;
+    font-variant: small-caps;
+}
+.btn{
+    background-color: rgb(13, 148, 24);
+}

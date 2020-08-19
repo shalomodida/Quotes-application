@@ -1,0 +1,31 @@
+<div class="container">
+    <h1 class="header">Essential Quotes</h1>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <div *ngFor='let quote of quotes; let i = index' class="card">
+                <div>
+                    <h6 id={{i}} appStrikethrough class="card-header">{{quote.name}} written on;
+                        {{quote.completeDate|date|uppercase}}</h6>
+                    <br>
+                    <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Quotes</button>
+                </div>
+                <br>
+                <div *ngIf='quote.showDescription'>
+                    <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'
+                        (isComplete)='deleteQuote($event,i)' class="desc"></app-quote-detail>
+                    <div class="row">
+                        <p>
+                            <app-vote></app-vote>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+        </div>
+    </div>
+    <p *ngIf='quotes.length> 10'>You have too many quotes</p>
+    <div class="footer">Essential-Quote 2020</div>
+</div>
